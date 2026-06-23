@@ -1,13 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Yash Patel — Software Developer & CS Student at FIU. Co-founder of Zuuke. Building AI-powered products.">
-  <title>Yash Patel — Software Developer</title>
+
+  <!-- SEO -->
+  <title>Yash Patel | Software Developer & CS Student at FIU</title>
+  <meta name="description" content="Yash Patel is a Software Developer and Computer Science student at Florida International University. Co-founder of Zuuke, an AI powered PC building platform. Open to software engineering internships.">
+  <meta name="keywords" content="Yash Patel, Software Developer, FIU, Florida International University, Zuuke, AI developer, web developer, Next.js, React, TypeScript">
+  <meta name="author" content="Yash Patel">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Yash Patel | Software Developer & CS Student at FIU">
+  <meta property="og:description" content="Software Developer and CS student at FIU. Co-founder of Zuuke, an AI powered PC building platform. Building thoughtful software and AI products.">
+  <meta property="og:image" content="uploads/3506310A-0693-43AE-BD5C-22D32BB35A71-b7568ebf.PNG">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Yash Patel | Software Developer">
+  <meta name="twitter:description" content="Software Developer and CS student at FIU. Co-founder of Zuuke.">
+  <meta name="twitter:image" content="uploads/3506310A-0693-43AE-BD5C-22D32BB35A71-b7568ebf.PNG">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Yash Patel",
+    "email": "yash.mum25@gmail.com",
+    "telephone": "(689) 266-6239",
+    "jobTitle": "Software Developer",
+    "description": "Software Developer and Computer Science student at Florida International University. Co-founder of Zuuke.",
+    "url": "https://yashpatel.dev",
+    "image": "uploads/3506310A-0693-43AE-BD5C-22D32BB35A71-b7568ebf.PNG",
+    "sameAs": [
+      "https://linkedin.com/in/yashpatel2006",
+      "https://github.com/Spartan2516",
+      "https://zuuke.shop"
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Florida International University",
+      "address": { "@type": "PostalAddress", "addressLocality": "Miami", "addressRegion": "FL" }
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Miami",
+      "addressRegion": "FL"
+    },
+    "knowsAbout": ["Python", "TypeScript", "JavaScript", "Next.js", "React", "Artificial Intelligence", "Web Development", "Supabase", "Node.js"]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -18,16 +69,9 @@
       color: var(--fg);
       line-height: 1.6;
     }
+
+    /* Dark palette only */
     :root {
-      --bg: #FDFCF8; --bg2: #F4F1EB; --bg3: #E9E5DB;
-      --card: #FFFFFF; --fg: #1A1814; --fg2: #6B6560; --fg3: #A09890;
-      --accent: #A8763E; --accent-light: #C49356;
-      --accent-bg: rgba(168,118,62,0.07); --accent-border: rgba(168,118,62,0.22);
-      --border: rgba(26,24,20,0.08); --border2: rgba(26,24,20,0.17);
-      --nav-bg: rgba(253,252,248,0.93);
-      --sh1: 0 1px 4px rgba(26,24,20,0.06); --sh2: 0 4px 24px rgba(26,24,20,0.09); --sh3: 0 20px 60px rgba(26,24,20,0.14);
-    }
-    [data-theme="dark"] {
       --bg: #110F0B; --bg2: #1C1A14; --bg3: #26231B;
       --card: #1C1A14; --fg: #F0EDE5; --fg2: #79736B; --fg3: #4A4740;
       --accent: #C8924E; --accent-light: #D9A868;
@@ -72,7 +116,7 @@
       transition: box-shadow 0.3s;
     }
     #nav.scrolled {
-      box-shadow: 0 1px 0 var(--border), 0 6px 20px rgba(26,24,20,0.07);
+      box-shadow: 0 1px 0 var(--border), 0 6px 20px rgba(0,0,0,0.35);
     }
     #nav-inner {
       max-width: 1120px; margin: 0 auto; padding: 0 28px;
@@ -87,9 +131,7 @@
     }
     .nav-brand:hover { opacity: 0.6; }
 
-    #nav-links {
-      display: flex; gap: 2px; align-items: center;
-    }
+    #nav-links { display: flex; gap: 2px; align-items: center; }
     .nav-btn {
       padding: 6px 13px; font-size: 13px; font-weight: 500; letter-spacing: 0.01em;
       color: var(--fg2); background: none; border: none; cursor: pointer;
@@ -97,17 +139,6 @@
       transition: color 0.15s, background 0.15s;
     }
     .nav-btn:hover { color: var(--fg); background: var(--bg2); }
-
-    #nav-right { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
-
-    .theme-btn {
-      font-size: 12px; font-weight: 500; letter-spacing: 0.04em;
-      color: var(--fg2); background: var(--bg2); border: 1px solid var(--border);
-      border-radius: 6px; padding: 6px 13px; cursor: pointer;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      transition: color 0.15s, background 0.15s;
-    }
-    .theme-btn:hover { color: var(--fg); background: var(--bg3); }
 
     #menu-btn {
       display: none; width: 34px; height: 34px;
@@ -147,15 +178,6 @@
       width: 6px; height: 6px; border-radius: 50%;
       background: var(--accent); flex-shrink: 0;
       animation: dotPulse 2.8s ease-in-out infinite;
-    }
-    .status-badge {
-      display: inline-flex; align-items: center; gap: 7px;
-      border: 1px solid var(--accent-border); border-radius: 100px;
-      padding: 6px 15px; margin-bottom: 36px; background: var(--accent-bg);
-    }
-    .status-text {
-      font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
-      text-transform: uppercase; color: var(--accent);
     }
     .hero-name {
       font-family: 'Cormorant Garamond', Georgia, serif;
@@ -215,9 +237,10 @@
       text-decoration: none; letter-spacing: 0.01em; transition: color 0.15s;
     }
     .social-link:hover { color: var(--fg2); }
-    .social-sep { color: var(--border2); user-select: none; }
+    .social-sep { color: var(--border2); user-select: none; font-size: 11px; }
 
     /* Hero photo */
+    #hero-photo-wrap { display: block; }
     #hero-photo { position: relative; max-width: 420px; width: 100%; }
     .photo-frame {
       position: absolute; inset: -10px -10px auto auto;
@@ -226,18 +249,17 @@
       z-index: 0; pointer-events: none;
     }
     #hero-photo img {
-      width: 100%; aspect-ratio: 1; object-fit: cover; object-position: center top;
+      width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center 15%;
       border-radius: 4px; display: block; position: relative; z-index: 1;
       box-shadow: var(--sh3);
     }
     .photo-caption {
       position: absolute; bottom: -1px; left: -1px; right: -1px; z-index: 2;
-      background: rgba(253,252,248,0.94);
+      background: rgba(17,15,11,0.93);
       backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
       border-top: 1px solid var(--border); border-radius: 0 0 4px 4px;
       padding: 14px 20px; display: flex; align-items: center; justify-content: space-between;
     }
-    [data-theme="dark"] .photo-caption { background: rgba(17,15,11,0.94); }
     .photo-caption-title {
       font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 15px;
       color: var(--fg); letter-spacing: 0.01em;
@@ -281,7 +303,7 @@
     }
     .card-label {
       font-size: 10px; font-weight: 600; letter-spacing: 0.13em;
-      text-transform: uppercase; color: var(--accent); margin-bottom: 16px;
+      text-transform: uppercase; color: var(--accent);
     }
     .edu-row { display: flex; align-items: flex-start; gap: 14px; }
     .edu-icon {
@@ -323,9 +345,6 @@
     .timeline-dot.inactive {
       background: var(--bg3); border: 2px solid var(--border2);
     }
-    .timeline-dot.dashed {
-      background: transparent; border: 1.5px dashed var(--border2);
-    }
     .timeline-line {
       flex: 1; width: 1px; background: var(--border); margin-top: 9px; min-height: 40px;
     }
@@ -365,11 +384,6 @@
       font-size: 11px; font-weight: 500; color: var(--fg3); background: var(--bg2);
       border: 1px solid var(--border); border-radius: 4px; padding: 3px 8px; letter-spacing: 0.02em;
     }
-    .placeholder-card {
-      background: var(--bg); border: 1px dashed var(--border2); border-radius: 10px;
-      padding: 20px 24px;
-    }
-    .placeholder-text { font-size: 13px; font-weight: 500; color: var(--fg3); }
 
     /* ── PROJECTS ───────────────────────────────────────── */
     #projects { padding: clamp(80px,10vh,120px) 28px; background: var(--bg2); }
@@ -517,7 +531,13 @@
       background: var(--card); border: 1px solid var(--border); border-radius: 12px;
       overflow: hidden; box-shadow: var(--sh2);
     }
-    .resume-viewer iframe { width: 100%; height: 720px; border: none; display: block; }
+    .resume-viewer object,
+    .resume-viewer embed { width: 100%; height: 780px; border: none; display: block; }
+    .resume-fallback {
+      width: 100%; height: 780px; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 16px; background: var(--bg3);
+    }
+    .resume-fallback p { font-size: 14px; color: var(--fg2); }
 
     /* ── CONTACT ────────────────────────────────────────── */
     #contact { padding: clamp(80px,10vh,120px) 28px; background: var(--bg); }
@@ -546,7 +566,6 @@
     .contact-icon.github { background: var(--bg2); border: 1px solid var(--border); color: var(--fg); }
     .contact-label { font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--fg3); margin-bottom: 3px; }
     .contact-value { font-size: 14.5px; font-weight: 500; color: var(--fg); }
-    .contact-note { font-size: 11.5px; color: var(--fg3); font-weight: 400; }
     .contact-arrow { color: var(--fg3); flex-shrink: 0; }
 
     /* ── FOOTER ─────────────────────────────────────────── */
@@ -574,6 +593,8 @@
       .proj-featured-grid { grid-template-columns: 1fr; }
       #projects-grid { grid-template-columns: 1fr; }
       #skills-grid { grid-template-columns: 1fr; }
+      .resume-viewer object,
+      .resume-viewer embed { height: 520px; }
     }
   </style>
 </head>
@@ -592,16 +613,13 @@
       <button class="nav-btn" onclick="scrollToSection('contact')">Contact</button>
     </nav>
 
-    <div id="nav-right">
-      <button class="theme-btn" id="theme-btn" onclick="toggleTheme()">◑ Dark</button>
-      <button id="menu-btn" onclick="toggleMenu()" aria-label="Open menu">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-      </button>
-    </div>
+    <button id="menu-btn" onclick="toggleMenu()" aria-label="Open menu">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
   </div>
 
   <div id="mobile-menu">
@@ -618,24 +636,18 @@
 <section id="hero">
   <div id="hero-inner">
 
-    <!-- Left: text -->
     <div>
-      <div class="status-badge ha ha1">
-        <div class="dot-pulse"></div>
-        <span class="status-text">Open to opportunities</span>
-      </div>
+      <h1 class="hero-name ha ha1">Yash Patel</h1>
 
-      <h1 class="hero-name ha ha2">Yash Patel</h1>
+      <p class="hero-role ha ha2">Software Developer &amp; CS Student, FIU</p>
 
-      <p class="hero-role ha ha3">Software Developer &amp; CS Student, FIU</p>
+      <div class="hero-divider ha ha2"></div>
 
-      <div class="hero-divider ha ha3"></div>
-
-      <p class="hero-bio ha ha4">
-        Building AI-powered products and thoughtful software. CS student at FIU, co-founding <a href="https://zuuke.shop" target="_blank" rel="noopener" class="accent-link">Zuuke</a> — the AI platform that builds your ideal PC. Graduating December 2027.
+      <p class="hero-bio ha ha3">
+        Building thoughtful software and AI powered products. CS student at FIU and co-founder of <a href="https://zuuke.shop" target="_blank" rel="noopener" class="accent-link">Zuuke</a>, the AI platform that builds your ideal PC. Graduating December 2027.
       </p>
 
-      <div class="hero-ctas ha ha5">
+      <div class="hero-ctas ha ha4">
         <button class="btn-primary" onclick="scrollToSection('projects')">
           View Projects
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -649,17 +661,17 @@
         </button>
       </div>
 
-      <div class="hero-socials ha ha6">
+      <div class="hero-socials ha ha5">
         <a href="https://linkedin.com/in/yashpatel2006" target="_blank" rel="noopener" class="social-link">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
           linkedin.com/in/yashpatel2006
         </a>
-        <span class="social-sep">—</span>
+        <span class="social-sep">·</span>
         <a href="https://github.com/Spartan2516" target="_blank" rel="noopener" class="social-link">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
           github.com/Spartan2516
         </a>
-        <span class="social-sep">—</span>
+        <span class="social-sep">·</span>
         <a href="https://zuuke.shop" target="_blank" rel="noopener" class="social-link">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
           zuuke.shop
@@ -667,11 +679,11 @@
       </div>
     </div>
 
-    <!-- Right: photo -->
+    <!-- Photo -->
     <div id="hero-photo-wrap" class="ha ha3">
       <div id="hero-photo">
         <div class="photo-frame"></div>
-        <img src="uploads/3506310A-0693-43AE-BD5C-22D32BB35A71-b7568ebf.PNG" alt="Yash Patel">
+        <img src="uploads/3506310A-0693-43AE-BD5C-22D32BB35A71-b7568ebf.PNG" alt="Yash Patel, Software Developer at FIU">
         <div class="photo-caption">
           <div>
             <p class="photo-caption-title">Florida International University</p>
@@ -697,10 +709,10 @@
       <div class="reveal">
         <h2 class="about-heading">Turning curiosity<br><em style="font-style:italic;color:var(--fg2)">into software.</em></h2>
         <p class="about-p">
-          I'm Yash — a Computer Science student at FIU with a strong pull toward AI, engineering, and building products from scratch. I don't just want to write code; I want to build things that matter.
+          I'm Yash, a Computer Science student at FIU with a strong pull toward AI, engineering, and building products from scratch. I don't just want to write code. I want to build things that matter.
         </p>
         <p class="about-p">
-          Right now I'm co-founding <a href="https://zuuke.shop" target="_blank" rel="noopener" class="accent-link">Zuuke</a> — an AI platform that takes the guesswork out of building a custom PC. It combines smart recommendations, real-time pricing, and compatibility checks in one experience.
+          Right now I'm co-founding <a href="https://zuuke.shop" target="_blank" rel="noopener" class="accent-link">Zuuke</a>, an AI platform that takes the guesswork out of building a custom PC. It combines smart recommendations, live pricing, and compatibility checks in one clean experience.
         </p>
         <p class="about-p" style="margin-bottom:0">
           I'm actively seeking software engineering internships and collaborations. If you're building something ambitious, I want to be in the room.
@@ -768,20 +780,49 @@
               </div>
               <span class="exp-badge">2024 – Present</span>
             </div>
-            <p class="exp-desc">Built an AI-powered platform for designing and pricing custom PC builds — from architecture to launch. Implemented AI recommendation systems, real-time pricing, and compatibility logic at zuuke.shop.</p>
+            <p class="exp-desc">Built and launched a full stack AI platform that generates personalized, compatibility-verified PC builds in under 30 seconds. Architected the backend with Supabase for real-time data and user authentication, and Stripe for subscription billing across Free and Pro tiers.</p>
             <div class="tech-tags">
+              <span class="tech-tag">Next.js</span>
               <span class="tech-tag">React</span>
-              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">Tailwind CSS</span>
+              <span class="tech-tag">Anthropic API</span>
+              <span class="tech-tag">Supabase</span>
+              <span class="tech-tag">Stripe</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Girgres -->
+      <div class="timeline-item reveal rv2">
+        <div class="timeline-track">
+          <div class="timeline-dot"></div>
+          <div class="timeline-line"></div>
+        </div>
+        <div class="timeline-content">
+          <div class="exp-card">
+            <div class="exp-header">
+              <div>
+                <p class="exp-title">Web Developer Intern</p>
+                <a href="https://girgres.com" target="_blank" rel="noopener" class="exp-company">Girgres LLC · girgres.com</a>
+              </div>
+              <span class="exp-badge">May 2025 – Aug 2025</span>
+            </div>
+            <p class="exp-desc">Developed and maintained website components using HTML, CSS, TypeScript and Next.js, improving performance and cross-browser consistency. Built responsive UI elements for seamless desktop and mobile experiences. Collaborated with stakeholders to align layouts with company branding.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">Next.js</span>
               <span class="tech-tag">Python</span>
-              <span class="tech-tag">OpenAI API</span>
-              <span class="tech-tag">PostgreSQL</span>
             </div>
           </div>
         </div>
       </div>
 
       <!-- FIU -->
-      <div class="timeline-item reveal rv2">
+      <div class="timeline-item reveal rv3">
         <div class="timeline-track">
           <div class="timeline-dot inactive"></div>
           <div class="timeline-line"></div>
@@ -795,19 +836,26 @@
               </div>
               <span class="exp-badge plain">2024 – Dec 2027</span>
             </div>
-            <p class="exp-desc" style="margin-bottom:0">Coursework in Data Structures, Algorithms, OOP, and Software Engineering. Actively applying concepts in real product development through Zuuke and independent projects.</p>
+            <p class="exp-desc" style="margin-bottom:0">Coursework in Data Structures and Algorithms, Object-Oriented Programming, Database Management, and Artificial Intelligence. Actively applying concepts in real product development through Zuuke and independent projects.</p>
           </div>
         </div>
       </div>
 
-      <!-- Placeholder -->
-      <div class="timeline-item reveal rv3">
+      <!-- INIT Hackathon -->
+      <div class="timeline-item reveal rv4">
         <div class="timeline-track">
-          <div class="timeline-dot dashed"></div>
+          <div class="timeline-dot inactive"></div>
         </div>
         <div class="timeline-content" style="padding-bottom:0">
-          <div class="placeholder-card">
-            <p class="placeholder-text">Add an internship or work experience — replace this entry.</p>
+          <div class="exp-card plain">
+            <div class="exp-header">
+              <div>
+                <p class="exp-title">INIT Hackathon</p>
+                <span class="exp-company plain">Florida International University</span>
+              </div>
+              <span class="exp-badge plain">Sept 2025</span>
+            </div>
+            <p class="exp-desc" style="margin-bottom:0">Collaborated in a team to design and build an AI chatbot for campus services within a 24-hour sprint. Owned core Python NLP feature implementation and presented the prototype live to a panel of judges.</p>
           </div>
         </div>
       </div>
@@ -840,14 +888,16 @@
         </div>
         <div class="proj-content">
           <p class="proj-type">AI Platform · Featured</p>
-          <h3 class="proj-name">AI-Powered Custom PC Building Platform</h3>
-          <p class="proj-desc">Describe your needs — budget, use case, performance goals — and Zuuke's AI engine returns an optimized, fully compatible build with live pricing. Zero guesswork, maximum performance per dollar.</p>
+          <h3 class="proj-name">AI Powered Custom PC Building Platform</h3>
+          <p class="proj-desc">Describe your needs, budget, use case and performance goals, and Zuuke returns a personalized, fully compatible build with live pricing in under 30 seconds. Bottleneck detection, upgrade planning, and budget optimization across $400 to $5,000+ builds.</p>
           <div class="proj-tags">
+            <span class="proj-tag">Next.js</span>
             <span class="proj-tag">React</span>
-            <span class="proj-tag">Node.js</span>
-            <span class="proj-tag">Python</span>
-            <span class="proj-tag">OpenAI API</span>
-            <span class="proj-tag">PostgreSQL</span>
+            <span class="proj-tag">TypeScript</span>
+            <span class="proj-tag">Tailwind CSS</span>
+            <span class="proj-tag">Anthropic API</span>
+            <span class="proj-tag">Supabase</span>
+            <span class="proj-tag">Stripe</span>
           </div>
           <div class="proj-actions">
             <a href="https://zuuke.shop" target="_blank" rel="noopener" class="btn-demo">
@@ -877,19 +927,26 @@
           <p class="proj-title-sm">Girgres</p>
         </div>
         <div class="proj-card-body">
-          <p class="proj-type" style="margin-bottom:10px">Full-Stack Website</p>
+          <p class="proj-type" style="margin-bottom:10px">Full Stack Website</p>
           <h3 class="proj-card-name">Girgres — Professional Business Website</h3>
-          <p class="proj-card-desc">Designed and developed a full responsive website for Girgres from concept to deployment. Custom UI, smooth interactions, mobile-first layout, and fast load performance.</p>
+          <p class="proj-card-desc">Designed and developed a fully responsive website for Girgres LLC from concept to deployment. Custom UI, smooth interactions, a mobile friendly layout, and cross-browser performance optimization.</p>
           <div class="proj-card-tags">
             <span class="proj-tag">HTML</span>
             <span class="proj-tag">CSS</span>
-            <span class="proj-tag">JavaScript</span>
-            <span class="proj-tag">Responsive Design</span>
+            <span class="proj-tag">TypeScript</span>
+            <span class="proj-tag">Next.js</span>
+            <span class="proj-tag">Python</span>
           </div>
-          <a href="https://github.com/Spartan2516/Girgres" target="_blank" rel="noopener" class="btn-gh-sm">
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-            View on GitHub
-          </a>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <a href="https://girgres.com" target="_blank" rel="noopener" class="btn-gh-sm">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              Live Site
+            </a>
+            <a href="https://github.com/Spartan2516/Girgres" target="_blank" rel="noopener" class="btn-gh-sm">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+              GitHub
+            </a>
+          </div>
         </div>
       </div>
 
@@ -905,15 +962,15 @@
         </div>
         <div class="proj-card-body">
           <p class="proj-type" style="margin-bottom:10px">AI · Python Tool</p>
-          <h3 class="proj-card-name">AI-Powered Resume Analysis &amp; Feedback</h3>
-          <p class="proj-card-desc">Uses NLP to surface actionable feedback, keyword gaps, and ATS compatibility scores — helping job seekers write more effective resumes.</p>
+          <h3 class="proj-card-name">AI Powered Resume Analysis and Feedback</h3>
+          <p class="proj-card-desc">Compares resumes against job descriptions using NLP, computing a quantitative match score via cosine similarity. Uses scikit-learn for TF-IDF vectorization and automated, data-driven compatibility scoring.</p>
           <div class="proj-card-tags">
             <span class="proj-tag">Python</span>
-            <span class="proj-tag">OpenAI API</span>
+            <span class="proj-tag">scikit-learn</span>
+            <span class="proj-tag">NLTK</span>
             <span class="proj-tag">NLP</span>
-            <span class="proj-tag">FastAPI</span>
           </div>
-          <a href="https://github.com/Spartan2516" target="_blank" rel="noopener" class="btn-gh-sm">
+          <a href="https://github.com/Spartan2516/ai-resume-analyzer" target="_blank" rel="noopener" class="btn-gh-sm">
             <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
             View on GitHub
           </a>
@@ -949,7 +1006,7 @@
             <span class="lang-badge">Primary</span>
           </div>
           <div class="lang-row">
-            <span class="lang-name">JavaScript</span>
+            <span class="lang-name">TypeScript &amp; JavaScript</span>
             <span class="lang-badge">Primary</span>
           </div>
           <div class="lang-row" style="justify-content:flex-start">
@@ -966,17 +1023,21 @@
           <div class="skill-icon">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
           </div>
-          <p class="skill-title">Tools &amp; Frameworks</p>
+          <p class="skill-title">Frameworks &amp; Tools</p>
         </div>
         <div class="badge-list">
-          <span class="badge-item">Git</span>
-          <span class="badge-item">GitHub</span>
-          <span class="badge-item">VS Code</span>
+          <span class="badge-item">Next.js</span>
           <span class="badge-item">React</span>
+          <span class="badge-item">Tailwind CSS</span>
           <span class="badge-item">Node.js</span>
-          <span class="badge-item">FastAPI</span>
-          <span class="badge-item">OpenAI API</span>
-          <span class="badge-item">PostgreSQL</span>
+          <span class="badge-item">Supabase</span>
+          <span class="badge-item">Stripe</span>
+          <span class="badge-item">Vercel</span>
+          <span class="badge-item">Anthropic SDK</span>
+          <span class="badge-item">scikit-learn</span>
+          <span class="badge-item">NLTK</span>
+          <span class="badge-item">Git</span>
+          <span class="badge-item">VS Code</span>
         </div>
       </div>
 
@@ -991,11 +1052,12 @@
           <span class="badge-item">Data Structures</span>
           <span class="badge-item">Algorithms</span>
           <span class="badge-item">OOP</span>
+          <span class="badge-item">NLP</span>
+          <span class="badge-item">RESTful APIs</span>
           <span class="badge-item">AI Fundamentals</span>
-          <span class="badge-item">Web Development</span>
-          <span class="badge-item">Debugging</span>
           <span class="badge-item">Responsive Design</span>
-          <span class="badge-item">Version Control</span>
+          <span class="badge-item">Agile Development</span>
+          <span class="badge-item">Database Management</span>
         </div>
       </div>
 
@@ -1021,7 +1083,13 @@
       </a>
     </div>
     <div class="resume-viewer reveal rv2">
-      <iframe src="uploads/Resume%20Project.pdf" title="Yash Patel Resume"></iframe>
+      <object data="uploads/Resume%20Project.pdf" type="application/pdf">
+        <embed src="uploads/Resume%20Project.pdf" type="application/pdf">
+        <div class="resume-fallback">
+          <p>PDF preview not supported in this browser.</p>
+          <a href="uploads/Resume%20Project.pdf" download="Yash_Patel_Resume.pdf" class="btn-download">Download Resume</a>
+        </div>
+      </object>
     </div>
   </div>
 </section>
@@ -1037,13 +1105,13 @@
     <p class="contact-sub reveal rv1">Open to internships, collaborations, and interesting conversations. I reply fast.</p>
 
     <div class="contact-links reveal rv2">
-      <a href="mailto:hello@yashpatel.dev" class="contact-link primary">
+      <a href="mailto:yash.mum25@gmail.com" class="contact-link primary">
         <div class="contact-icon email">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         </div>
         <div style="min-width:0;flex:1">
           <p class="contact-label">Email</p>
-          <p class="contact-value">hello@yashpatel.dev <span class="contact-note">— update with yours</span></p>
+          <p class="contact-value">yash.mum25@gmail.com</p>
         </div>
         <svg class="contact-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
@@ -1074,7 +1142,7 @@
 <!-- ── FOOTER ─────────────────────────────────────────────────── -->
 <footer>
   <div class="footer-inner">
-    <p class="footer-copy">© 2026 Yash Patel · Miami, FL</p>
+    <p class="footer-copy">© 2025 Yash Patel · Miami, FL</p>
     <p class="footer-role">CS @ FIU · Co-founder of Zuuke</p>
     <div class="footer-links">
       <a href="https://linkedin.com/in/yashpatel2006" target="_blank" rel="noopener" class="footer-link">LinkedIn</a>
@@ -1085,27 +1153,6 @@
 </footer>
 
 <script>
-  // ── THEME ──────────────────────────────────────────────────
-  const themeBtn = document.getElementById('theme-btn');
-
-  function applyTheme(theme) {
-    document.documentElement.setAttribute('data-theme', theme);
-    themeBtn.textContent = theme === 'dark' ? '☀ Light' : '◑ Dark';
-  }
-
-  function toggleTheme() {
-    const current = document.documentElement.getAttribute('data-theme') || 'light';
-    const next = current === 'light' ? 'dark' : 'light';
-    applyTheme(next);
-    localStorage.setItem('yp-theme', next);
-  }
-
-  (function initTheme() {
-    const saved = localStorage.getItem('yp-theme');
-    const sys = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    applyTheme(saved || sys);
-  })();
-
   // ── MOBILE MENU ────────────────────────────────────────────
   const mobileMenu = document.getElementById('mobile-menu');
   let menuOpen = false;

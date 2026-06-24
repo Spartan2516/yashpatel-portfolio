@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120">
+  <rect width="400" height="120" fill="#f0ece4"/>
+  <text
+    x="200" y="90"
+    font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif"
+    font-weight="900"
+    font-size="82"
+    letter-spacing="-2"
+    fill="#2a2a2a"
+    text-anchor="middle"
+    dominant-baseline="auto"
+  >GIRGRES</text>
+</svg>

@@ -590,16 +590,106 @@
 
     /* ── RESPONSIVE ─────────────────────────────────────── */
     @media (max-width: 767px) {
+
+      /* Nav */
       #nav-links { display: none; }
       #menu-btn { display: flex; }
-      #hero-inner { grid-template-columns: 1fr; }
-      #hero-photo-wrap { display: none; }
-      #about-grid { grid-template-columns: 1fr; }
+      #nav-inner { padding: 0 20px; height: 56px; }
+
+      /* Hero */
+      #hero {
+        padding: calc(56px + 36px) 20px 56px;
+        min-height: auto;
+      }
+      #hero-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      #hero-photo-wrap {
+        display: block;
+        order: -1;
+      }
+      #hero-photo {
+        max-width: 160px;
+        margin: 0 auto;
+      }
+      #hero-photo img {
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        object-position: center 10%;
+      }
+      .photo-frame { display: none; }
+      .photo-caption { display: none; }
+      .hero-name { font-size: clamp(40px, 11vw, 56px); margin-bottom: 8px; }
+      .hero-role { font-size: 17px; margin-bottom: 20px; }
+      .hero-divider { margin-bottom: 20px; }
+      .hero-bio { font-size: 14.5px; margin-bottom: 28px; line-height: 1.75; }
+      .hero-ctas { gap: 8px; margin-bottom: 28px; }
+      .btn-primary, .btn-secondary { padding: 12px 18px; font-size: 13px; }
+      .btn-ghost { padding: 12px 10px; font-size: 13px; }
+      .hero-socials { gap: 12px; flex-direction: column; align-items: flex-start; }
+      .social-sep { display: none; }
+      .social-link { font-size: 12px; }
+
+      /* Section shared */
+      .section-label { margin-bottom: 36px; }
+      .section-heading { font-size: clamp(28px, 8vw, 38px); margin-bottom: 32px; }
+
+      /* About */
+      #about { padding: 64px 20px; }
+      #about-grid { grid-template-columns: 1fr; gap: 32px; }
+      .about-heading { font-size: clamp(30px, 8vw, 42px); margin-bottom: 24px; }
+      .about-p { font-size: 14.5px; line-height: 1.8; }
+      .about-cards { gap: 10px; }
+      .about-card { padding: 18px; }
+
+      /* Experience */
+      #experience { padding: 64px 20px; }
+      .timeline-item { gap: 14px; }
+      .exp-card { padding: 18px; }
+      .exp-header { flex-direction: column; gap: 8px; align-items: flex-start; }
+      .exp-badge { align-self: flex-start; }
+
+      /* Projects */
+      #projects { padding: 64px 20px; }
+      .proj-card-featured { border-radius: 14px; }
       .proj-featured-grid { grid-template-columns: 1fr; }
-      #projects-grid { grid-template-columns: 1fr; }
-      #skills-grid { grid-template-columns: 1fr; }
+      .proj-dark-panel { padding: 32px 24px; border-radius: 14px 14px 0 0; }
+      .proj-dark-panel img { width: 100px !important; height: 100px !important; margin: 0 auto 12px !important; }
+      .proj-title-lg { font-size: 28px; }
+      .proj-content { padding: 24px; }
+      .proj-desc { font-size: 14px; line-height: 1.75; }
+      #projects-grid { grid-template-columns: 1fr; gap: 14px; }
+      .proj-card { border-radius: 12px; }
+      .proj-mini-panel { padding: 28px 20px; border-radius: 12px 12px 0 0; min-height: 130px; }
+      .proj-mini-panel img { max-width: 160px !important; }
+      .proj-card-body { padding: 20px; }
+      .proj-card-name { font-size: 16px; }
+      .proj-card-desc { font-size: 13.5px; line-height: 1.75; }
+      .proj-actions { flex-wrap: wrap; gap: 8px; }
+      .btn-demo, .btn-gh { padding: 9px 14px; font-size: 12.5px; }
+
+      /* Skills */
+      #skills { padding: 64px 20px; }
+      #skills-grid { grid-template-columns: 1fr; gap: 12px; }
+      .skill-card { padding: 20px; }
+      .skill-tags { gap: 6px; }
+
+      /* Resume */
+      #resume { padding: 64px 20px; }
       .resume-viewer object,
-      .resume-viewer embed { height: 520px; }
+      .resume-viewer embed { height: 420px; }
+      .resume-viewer { border-radius: 10px; }
+
+      /* Contact */
+      #contact { padding: 64px 20px; }
+      .contact-cards { gap: 10px; }
+      .contact-card { padding: 16px 18px; }
+
+      /* Footer */
+      footer { padding: 24px 20px; }
+      .footer-inner { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .footer-links { gap: 16px; }
     }
   </style>
 </head>
